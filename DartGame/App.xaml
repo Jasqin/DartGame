@@ -1,0 +1,47 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DartGame"
+             x:Class="DartGame.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="PointBut" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#fff"/>
+                <Setter Property="TextColor" Value="#333"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+
+            <Style x:Key="Bull" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#fff"/>
+                <Setter Property="TextColor" Value="#333"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+
+
+            <Style x:Key="ModifierButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#dcdcdc"/>
+                <Setter Property="TextColor" Value="#333"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+
+
+            <Style x:Key="ConfirmButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4CAF50"/>
+                <Setter Property="TextColor" Value="#fff"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

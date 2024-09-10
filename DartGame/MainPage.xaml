@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DartGame.MainPage"
+             BackgroundColor="#f0f0f0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,30" Spacing="25">
+            <Label Text="Darts 501 Game" FontSize="30" HorizontalOptions="Center" Margin="0,-15,0,-10" TextColor="#333"/>
+
+            <Label Text="Wybierz liczbę graczy:" FontSize="20" TextColor="Black" HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                <Button x:Name="TwoPlayersButton" Text="2 Graczy" Clicked="OnPlayersSelected" TextColor="Black" CommandParameter="2" Background="Green"/>
+                <Button x:Name="ThreePlayersButton" Text="3 Graczy" Clicked="OnPlayersSelected" TextColor="Black" CommandParameter="3" Background="DarkGoldenrod"/>
+            </StackLayout>
+
+            <Label x:Name="Player1ScoreLabel" FontSize="20" HorizontalOptions="Center" TextColor="#000080"/>
+            <Label x:Name="Player2ScoreLabel" FontSize="20" HorizontalOptions="Center" TextColor="#800000"/>
+            <Label x:Name="Player3ScoreLabel" FontSize="20" HorizontalOptions="Center" TextColor="#008000" IsVisible="False"/>
+
+            <Label x:Name="Kogokolej" FontSize="20" HorizontalOptions="Center" Margin="0,-10,0,-10" TextColor="#333"/>
+            <Label x:Name="Obecnarunda" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0" TextColor="#333"/>
+
+            <Grid Margin="0,-10,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Text="1" Grid.Row="0" Grid.Column="0" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="2" Grid.Row="0" Grid.Column="1" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="4" Grid.Row="0" Grid.Column="3" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="5" Grid.Row="1" Grid.Column="0" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="6" Grid.Row="1" Grid.Column="1" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="7" Grid.Row="1" Grid.Column="2" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="8" Grid.Row="1" Grid.Column="3" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="9" Grid.Row="2" Grid.Column="0" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="10" Grid.Row="2" Grid.Column="1" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="11" Grid.Row="2" Grid.Column="2" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="12" Grid.Row="2" Grid.Column="3" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="13" Grid.Row="3" Grid.Column="0" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="14" Grid.Row="3" Grid.Column="1" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="15" Grid.Row="3" Grid.Column="2" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="16" Grid.Row="3" Grid.Column="3" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="17" Grid.Row="4" Grid.Column="0" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="18" Grid.Row="4" Grid.Column="1" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="19" Grid.Row="4" Grid.Column="2" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+                <Button Text="20" Grid.Row="4" Grid.Column="3" Clicked="OnPointButtonClicked" Style="{StaticResource PointBut}"/>
+
+
+                <Button Text="25" Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" Clicked="OnGreenCenter" Style="{StaticResource Bull}" BackgroundColor="#00AA00"/>
+                <Button Text="Usuń ostatni rzut" Grid.Row="5" Grid.RowSpan="2" Grid.Column="1"  Grid.ColumnSpan="2" Clicked="OnRemoveLastThrowClicked" Style="{StaticResource Bull}" BackgroundColor="LightGrey" />
+                <Button Text="50" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2"  Clicked="OnRedCenter" Style="{StaticResource Bull}" BackgroundColor="#FF0000"/>
+                <Label  Grid.Row="6" HorizontalOptions="Center" HeightRequest="50"/>
+
+                <Button Text="Double" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Clicked="OnDoubleButtonClicked" Style="{StaticResource ModifierButtonStyle}"/>
+                <Button Text="Triple"  Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"  Clicked="OnTripleButtonClicked" Style="{StaticResource ModifierButtonStyle}"/>
+                <Label  Grid.Row="8" HorizontalOptions="Center" HeightRequest="40"/>
+            </Grid>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,0">
+
+            </StackLayout>
+
+            <Button Text="Zatwierdź" Clicked="OnConfirmButtonClicked" HorizontalOptions="Center" Margin="0,-40,0,0" Style="{StaticResource ConfirmButtonStyle}"/>
+            <Button Text="Reset" Clicked="ResetGame" HorizontalOptions="Center" Margin="0,10,0,0" Style="{StaticResource ModifierButtonStyle}" Background="Red"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
